@@ -12,7 +12,7 @@ class WatchQueueWorkCommand extends Command
 {
     protected Process $queueWorkProcess;
 
-    protected $signature = 'queue:watch {--queue=default}';
+    protected $signature = 'queue:watch {--timeout=30} {--queue=default}';
 
     protected $description = 'Run Queue and restart it when PHP files are changed';
 
@@ -31,7 +31,7 @@ class WatchQueueWorkCommand extends Command
 
     protected function startQueueWork(): bool
     {
-        $this->queueWorkProcess = Process::fromShellCommandline(config('queue-watcher.command') . ' --queue=' . $this->option('queue'));
+        $this->queueWorkProcess = Process::fromShellCommandline(config('queue-watcher.command') . ' --timeout=' . $this->option('timeout') . ' --queue=' . $this->option('queue'));
 
         $this->queueWorkProcess->setTty(true)->setTimeout(null);
 

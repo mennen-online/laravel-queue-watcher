@@ -10,6 +10,8 @@ when any PHP file is created, updated or deleted.
 
 Also you can provide the `--queue=` option to define another queue than default to be watched.
 
+To disable Job and Queue Timeout, use the `--timeout=` option with value 0.
+
 This command is meant to be used in local environment.
 
 ## Installation
@@ -51,6 +53,8 @@ return [
 Run `php artisan queue:watch` to start default queue. When a PHP file in your project gets created, updated or deleted, Queue will automatically restart.
 
 Run `php artisan queue:watch --queue=another_queue` to start another_queue and restart it automatically.
+
+Run `php artisan queue:watch --timeout=0` to disable queue worker timeout.
 ## Testing
 
 ```bash
