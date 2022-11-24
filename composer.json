@@ -58,7 +58,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MennenONline\\QueueWatcher\\QueueWatcherServiceProvider"
+                "MennenOnline\\QueueWatcher\\QueueWatcherServiceProvider"
             ],
             "aliases": {
                 "HorizonWatcher": "MennenOnline\\QueueWatcher\\Facades\\QueueWatcher"
