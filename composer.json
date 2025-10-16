@@ -2,7 +2,6 @@
     "name": "mennen-online/laravel-queue-watcher",
     "description": "Automatically restart Queue when local PHP files change",
     "keywords": [
-        "mennen-online",
         "laravel",
         "laravel-horizon-watcher"
     ],
@@ -11,7 +10,7 @@
     "authors": [
         {
             "name": "Hendrik Mennen",
-            "email": "hendrik.mennen@mennen.online",
+            "email": "hmennen90@gmail.com",
             "role": "Developer"
         }
     ],
